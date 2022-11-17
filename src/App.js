@@ -1,15 +1,19 @@
+import React from 'react';
+import Home from './page/Home';
+import { Routes, Route } from 'react-router-dom';
+import PlaceToStay from './components/PlaceToStay';
 
-import './App.css';
-import Nav from './components/Nav/Nav';
-function App() {
-  return (
-    <div className="App">
-      <Nav/>
-      <header className="App-header">
-        
-      </header>
-    </div>
-  );
+function App(){
+return(
+    
+    <section className=''>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/placetostay" element={<PlaceToStay />} />
+    </Routes>
+    </section>
+)
+
 }
 
 export default App;
