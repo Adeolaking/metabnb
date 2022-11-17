@@ -124,7 +124,7 @@ function Header() {
                   navLinkList.map((navlink, key)=>{
                     return(
                       <li key={key} className=" text-white hover:text-blue-600 lg:text-[#434343] cursor-pointer text-[20px] font-[Red Rose] font-normal leading-[25px] ">
-                        <a href={navlink.linkTo}>Home</a>
+                        <a href={navlink.linkTo}>{navlink.name}</a>
                       </li>
                     )
                   })
