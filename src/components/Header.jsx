@@ -27,6 +27,32 @@ function Header() {
 
   const [navbar, setNavbar] = useState(false);
 
+  const navLinkList = [
+    {
+    name: "Home",
+    linkTo: "/",
+    id: "home__link",
+    title: "home page",
+  },
+  {
+    name: "Place to stay",
+    linkTo: '/placetostay',
+    id: "placeToStay__link",
+    title: "place to stay",
+  },
+  {
+    name: "NFT",
+    linkTo: "/",
+    id: "twitter__link",
+    title: "",
+  },
+  {
+    name: "community",
+    linkTo: "/",
+    id: "community__link",
+    title: "",
+  },
+]
   return (
     <div className="relative  items-center ">
       <div className=" max-w-screen-xl pl-4 pr-4 pt-4 mb-5 flex flex-row items-center justify-between lg:pl-[100px] lg:pt-0   md:pl-[35px] md:pt-6  ">
@@ -93,18 +119,17 @@ function Header() {
               } left-20 z-10 flex flex-col items-center text-white p-10 mt-4 bg-gray-500 rounded-lg border md:left-[190px] border-gray-100 lg:flex-row lg:gap-28  lg:rounded-none lg:border-none lg:bg-white gap-5`}
             >
               <ul className="flex flex-col gap-2  md:flex-row md:gap-[48px] md:p-0     lg:gap-[48px] lg:p-0 ">
-                <li className=" text-white hover:text-blue-600 lg:text-[#434343] cursor-pointer text-[20px] font-[Red Rose] font-normal leading-[25px] ">
-                  <a href="/">Home</a>
-                </li>
-                <li className=" text-white hover:text-blue-600 lg:text-[#434343] cursor-pointer text-[20px] font-[Red Rose] font-normal leading-[25px] ">
-                  <a href="/placetostay">Place To Stay</a>
-                </li>
-                <li className=" text-white hover:text-blue-600 lg:text-[#434343] cursor-pointer text-[20px] font-[Red Rose] font-normal leading-[25px] ">
-                  <a href="/">NFTs</a>
-                </li>
-                <li className=" text-white hover:text-blue-600 lg:text-[#434343] cursor-pointer text-[20px] font-[Red Rose] font-normal leading-[25px] ">
-                  <a href="/">Community</a>
-                </li>
+                {
+
+                  navLinkList.map((navlink, key)=>{
+                    return(
+                      <li key={key} className=" text-white hover:text-blue-600 lg:text-[#434343] cursor-pointer text-[20px] font-[Red Rose] font-normal leading-[25px] ">
+                        <a href={navlink.linkTo}>Home</a>
+                      </li>
+                    )
+                  })
+                  
+                }
               </ul>
 
               <button

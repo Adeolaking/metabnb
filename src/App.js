@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './page/Home';
 import { Routes, Route } from 'react-router-dom';
-import PlaceToStay from './components/PlaceToStay';
+import PlaceToStay from './page/PlaceToStay';
 
 function App(){
 return(
